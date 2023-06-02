@@ -62,6 +62,14 @@ public class ToileController implements Initializable {
     Circle circle5 = new Circle();
     Circle circle6 = new Circle();
 
+    Line line1 = new Line();
+    Line line2 = new Line();
+    Line line3 = new Line();
+    Line line4 = new Line();
+    Line line5 = new Line();
+    Line line6 = new Line();
+
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
     }
@@ -136,6 +144,39 @@ public class ToileController implements Initializable {
 // Tracer et Vider
     @FXML
     private void tracerClicked() {
+        scene.getChildren().removeAll(line1,line2,line3,line4,line5,line6);
+
+        line1.setStartX(getXRadarChart(get1(),1));
+        line1.setStartY(getYRadarChart(get1(),1));
+        line1.setEndX(getXRadarChart(get2(),2));
+        line1.setEndY(getYRadarChart(get2(),2));
+
+        line2.setStartX(getXRadarChart(get2(),2));
+        line2.setStartY(getYRadarChart(get2(),2));
+        line2.setEndX(getXRadarChart(get3(),3));
+        line2.setEndY(getYRadarChart(get3(),3));
+
+        line3.setStartX(getXRadarChart(get3(),3));
+        line3.setStartY(getYRadarChart(get3(),3));
+        line3.setEndX(getXRadarChart(get4(),4));
+        line3.setEndY(getYRadarChart(get4(),4));
+
+        line4.setStartX(getXRadarChart(get4(),4));
+        line4.setStartY(getYRadarChart(get4(),4));
+        line4.setEndX(getXRadarChart(get5(),5));
+        line4.setEndY(getYRadarChart(get5(),5));
+
+        line5.setStartX(getXRadarChart(get5(),5));
+        line5.setStartY(getYRadarChart(get5(),5));
+        line5.setEndX(getXRadarChart(get6(),6));
+        line5.setEndY(getYRadarChart(get6(),6));
+
+        line6.setStartX(getXRadarChart(get6(),6));
+        line6.setStartY(getYRadarChart(get6(),6));
+        line6.setEndX(getXRadarChart(get1(),1));
+        line6.setEndY(getYRadarChart(get1(),1));
+
+        scene.getChildren().addAll(line1,line2,line3,line4,line5,line6);
     }
     @FXML
     private void viderClicked() {
@@ -152,7 +193,7 @@ public class ToileController implements Initializable {
 
 // Get le contenu des Text Field (TF)
     @FXML
-    private void get1() {
+    private int get1() {
         int val = 0;
         if (TF1.getText().length()>0) {
             val = Integer. valueOf(TF1.getText());
@@ -164,9 +205,10 @@ public class ToileController implements Initializable {
             err1.setVisible(true);
             err2.setVisible(true);
         }
+        return val;
     }
     @FXML
-    private void get2() {
+    private int get2() {
         int val = 0;
         if (TF2.getText().length()>0) {
             val = Integer. valueOf(TF2.getText());
@@ -178,9 +220,10 @@ public class ToileController implements Initializable {
             err1.setVisible(true);
             err2.setVisible(true);
         }
+        return val;
     }
     @FXML
-    private void get3() {
+    private int get3() {
         int val = 0;
         if (TF3.getText().length()>0) {
             val = Integer. valueOf(TF3.getText());
@@ -192,9 +235,10 @@ public class ToileController implements Initializable {
             err1.setVisible(true);
             err2.setVisible(true);
         }
+        return val;
     }
     @FXML
-    private void get4() {
+    private int get4() {
         int val = 0;
         if (TF4.getText().length()>0) {
             val = Integer. valueOf(TF4.getText());
@@ -206,9 +250,10 @@ public class ToileController implements Initializable {
             err1.setVisible(true);
             err2.setVisible(true);
         }
+        return val;
     }
     @FXML
-    private void get5() {
+    private int get5() {
         int val = 0;
         if (TF5.getText().length()>0) {
             val = Integer. valueOf(TF5.getText());
@@ -220,9 +265,10 @@ public class ToileController implements Initializable {
             err1.setVisible(true);
             err2.setVisible(true);
         }
+        return val;
     }
     @FXML
-    private void get6() {
+    private int get6() {
         int val = 0;
         if (TF6.getText().length()>0) {
             val = Integer. valueOf(TF6.getText());
@@ -234,6 +280,7 @@ public class ToileController implements Initializable {
             err1.setVisible(true);
             err2.setVisible(true);
         }
+        return val;
     }
 
 
