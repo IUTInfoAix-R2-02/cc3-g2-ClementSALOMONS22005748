@@ -7,8 +7,9 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<HBox id="scene" prefHeight="420.0" prefWidth="650.0" spacing="20.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
-    <Pane prefHeight="400.0" prefWidth="400.0">
+<HBox id="scene" prefHeight="420.0" prefWidth="650.0" spacing="20.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="fr.amu.iut.cc3.ToileController">
+    <Pane prefHeight="400.0" prefWidth="400.0" fx:id="scene">
         <Circle centerX="200.0" centerY="200.0" radius="200.0" styleClass="toile" />
         <Circle centerX="200.0" centerY="200.0" radius="150.0" styleClass="toile" />
         <Circle centerX="200.0" centerY="200.0" radius="100.0" styleClass="toile" />
@@ -45,14 +46,14 @@
                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
            </rowConstraints>
             <children>
-               <Label prefHeight="16.0" prefWidth="181.0" text="Compétence 1 - Réaliser" />
-               <TextField prefHeight="24.0" prefWidth="135.0" GridPane.columnIndex="1" />
+               <Label prefHeight="16.0" prefWidth="181.0" text="Compétence 1 - Réaliser"  />
                <Label prefHeight="16.0" prefWidth="181.0" text="Compétence 2 - Optimiser" GridPane.rowIndex="1" />
-               <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-               <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-               <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
-               <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
-               <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                <TextField fx:id="TF1" prefHeight="24.0" prefWidth="135.0" GridPane.columnIndex="1" onAction="#get1" />
+               <TextField fx:id="TF2" GridPane.columnIndex="1" GridPane.rowIndex="1" onAction="#get2"  />
+               <TextField fx:id="TF3" GridPane.columnIndex="1" GridPane.rowIndex="2" onAction="#get3"  />
+               <TextField fx:id="TF4" GridPane.columnIndex="1" GridPane.rowIndex="3" onAction="#get4"  />
+               <TextField fx:id="TF5" GridPane.columnIndex="1" GridPane.rowIndex="4" onAction="#get5"  />
+               <TextField fx:id="TF6" GridPane.columnIndex="1" GridPane.rowIndex="5" onAction="#get6"  />
                <Label text="Compétence 3 - Administrer" GridPane.rowIndex="2">
                   <font>
                      <Font size="12.0" />
@@ -68,8 +69,8 @@
          </GridPane>
          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
             <children>
-               <Button mnemonicParsing="false" text="Tracer" />
-               <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Vider" />
+               <Button mnemonicParsing="false" onAction="#tracerClicked" text="Tracer" />
+               <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#viderClicked" text="Vider" />
             </children>
          </HBox>
       </children>
