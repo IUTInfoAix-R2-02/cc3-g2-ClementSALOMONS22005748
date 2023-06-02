@@ -11,6 +11,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -208,6 +209,16 @@ public class ToileController implements Initializable {
 
 
 // Get le contenu des Text Field (TF)
+    private int get(ActionEvent e) {
+        int val = 0;
+        TextField source = (TextField)(e.getSource());
+
+        if (source.getText().length() > 0) {
+            val = Integer.valueOf(source.getText());
+        }
+        return val;
+    }
+
     @FXML
     private int get1() {
         int val = 0;
@@ -298,7 +309,4 @@ public class ToileController implements Initializable {
         }
         return val;
     }
-
-
-
 }
