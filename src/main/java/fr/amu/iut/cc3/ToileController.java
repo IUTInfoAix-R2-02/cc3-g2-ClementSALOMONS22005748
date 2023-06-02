@@ -170,34 +170,44 @@ public class ToileController implements Initializable {
 // Tracer et Vider
     @FXML
     private void tracerClicked() {
-        scene.getChildren().removeAll(line1,line2,line3,line4,line5,line6);
 
-        line2.setStartX(getXRadarChart(get2(),2));
-        line2.setStartY(getYRadarChart(get2(),2));
-        line2.setEndX(getXRadarChart(get3(),3));
-        line2.setEndY(getYRadarChart(get3(),3));
+        if( (get1()>=0 && get1()<=20) && (get2()>=0 && get2()<=20) && (get3()>=0 && get3()<=20) && (get4()>=0 && get4()<=20) &&
+                (get5()>=0 && get5()<=20) && (get6()>=0 && get6()<=20) ) {
 
-        line3.setStartX(getXRadarChart(get3(),3));
-        line3.setStartY(getYRadarChart(get3(),3));
-        line3.setEndX(getXRadarChart(get4(),4));
-        line3.setEndY(getYRadarChart(get4(),4));
+            scene.getChildren().removeAll(line1, line2, line3, line4, line5, line6);
 
-        line4.setStartX(getXRadarChart(get4(),4));
-        line4.setStartY(getYRadarChart(get4(),4));
-        line4.setEndX(getXRadarChart(get5(),5));
-        line4.setEndY(getYRadarChart(get5(),5));
+            line2.setStartX(getXRadarChart(get2(), 2));
+            line2.setStartY(getYRadarChart(get2(), 2));
+            line2.setEndX(getXRadarChart(get3(), 3));
+            line2.setEndY(getYRadarChart(get3(), 3));
 
-        line5.setStartX(getXRadarChart(get5(),5));
-        line5.setStartY(getYRadarChart(get5(),5));
-        line5.setEndX(getXRadarChart(get6(),6));
-        line5.setEndY(getYRadarChart(get6(),6));
+            line3.setStartX(getXRadarChart(get3(), 3));
+            line3.setStartY(getYRadarChart(get3(), 3));
+            line3.setEndX(getXRadarChart(get4(), 4));
+            line3.setEndY(getYRadarChart(get4(), 4));
 
-        line6.setStartX(getXRadarChart(get6(),6));
-        line6.setStartY(getYRadarChart(get6(),6));
-        line6.setEndX(getXRadarChart(get1(),1));
-        line6.setEndY(getYRadarChart(get1(),1));
+            line4.setStartX(getXRadarChart(get4(), 4));
+            line4.setStartY(getYRadarChart(get4(), 4));
+            line4.setEndX(getXRadarChart(get5(), 5));
+            line4.setEndY(getYRadarChart(get5(), 5));
 
-        scene.getChildren().addAll(line1,line2,line3,line4,line5,line6);
+            line5.setStartX(getXRadarChart(get5(), 5));
+            line5.setStartY(getYRadarChart(get5(), 5));
+            line5.setEndX(getXRadarChart(get6(), 6));
+            line5.setEndY(getYRadarChart(get6(), 6));
+
+            line6.setStartX(getXRadarChart(get6(), 6));
+            line6.setStartY(getYRadarChart(get6(), 6));
+            line6.setEndX(getXRadarChart(get1(), 1));
+            line6.setEndY(getYRadarChart(get1(), 1));
+
+            scene.getChildren().addAll(line1, line2, line3, line4, line5, line6);
+        }
+        else {
+            err1.setVisible(true);
+            err2.setVisible(true);
+        }
+
     }
     @FXML
     private void viderClicked() {
