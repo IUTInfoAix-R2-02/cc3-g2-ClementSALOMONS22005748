@@ -202,12 +202,8 @@ public class ToileController implements Initializable {
     private void viderClicked() {
         err1.setVisible(false);
         err2.setVisible(false);
-        circle1.setVisible(false);
-        circle2.setVisible(false);
-        circle3.setVisible(false);
-        circle4.setVisible(false);
-        circle5.setVisible(false);
-        circle6.setVisible(false);
+        scene.getChildren().removeAll(circle1,circle2,circle3,circle4,circle5,circle6);
+        scene.getChildren().removeAll(line1,line2,line3,line4,line5,line6);
     }
 
 
