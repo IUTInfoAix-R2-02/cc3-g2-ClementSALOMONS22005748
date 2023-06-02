@@ -97,6 +97,10 @@ public class ToileController implements Initializable {
             circle1.setCenterY(y);
             circle1.setRadius(7);
             scene.getChildren().add(circle1);
+            line6.setEndX(x);
+            line6.setEndY(y);
+            line1.setStartX(x);
+            line1.setStartY(y);
         }
         if (comp == 2) {
             scene.getChildren().remove(circle2);
@@ -105,6 +109,10 @@ public class ToileController implements Initializable {
             circle2.setCenterY(y);
             circle2.setRadius(7);
             scene.getChildren().add(circle2);
+            line1.setEndX(x);
+            line1.setEndY(y);
+            line2.setStartX(x);
+            line2.setStartY(y);
         }
         if (comp == 3) {
             scene.getChildren().remove(circle3);
@@ -113,6 +121,10 @@ public class ToileController implements Initializable {
             circle3.setCenterY(y);
             circle3.setRadius(7);
             scene.getChildren().add(circle3);
+            line2.setEndX(x);
+            line2.setEndY(y);
+            line3.setStartX(x);
+            line3.setStartY(y);
         }
         if (comp == 4) {
             scene.getChildren().remove(circle4);
@@ -121,6 +133,10 @@ public class ToileController implements Initializable {
             circle4.setCenterY(y);
             circle4.setRadius(7);
             scene.getChildren().add(circle4);
+            line3.setEndX(x);
+            line3.setEndY(y);
+            line4.setStartX(x);
+            line4.setStartY(y);
         }
         if (comp == 5) {
             scene.getChildren().remove(circle5);
@@ -129,6 +145,10 @@ public class ToileController implements Initializable {
             circle5.setCenterY(y);
             circle5.setRadius(7);
             scene.getChildren().add(circle5);
+            line4.setEndX(x);
+            line4.setEndY(y);
+            line5.setStartX(x);
+            line5.setStartY(y);
         }
         if (comp == 6) {
             scene.getChildren().remove(circle6);
@@ -137,7 +157,12 @@ public class ToileController implements Initializable {
             circle6.setCenterY(y);
             circle6.setRadius(7);
             scene.getChildren().add(circle6);
+            line5.setEndX(x);
+            line5.setEndY(y);
+            line6.setStartX(x);
+            line6.setStartY(y);
         }
+
     }
 
 
@@ -145,11 +170,6 @@ public class ToileController implements Initializable {
     @FXML
     private void tracerClicked() {
         scene.getChildren().removeAll(line1,line2,line3,line4,line5,line6);
-
-        line1.setStartX(getXRadarChart(get1(),1));
-        line1.setStartY(getYRadarChart(get1(),1));
-        line1.setEndX(getXRadarChart(get2(),2));
-        line1.setEndY(getYRadarChart(get2(),2));
 
         line2.setStartX(getXRadarChart(get2(),2));
         line2.setStartY(getYRadarChart(get2(),2));
