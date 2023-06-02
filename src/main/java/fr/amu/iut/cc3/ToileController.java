@@ -55,6 +55,13 @@ public class ToileController implements Initializable {
     @FXML
     Pane scene;
 
+    Circle circle1 = new Circle();
+    Circle circle2 = new Circle();
+    Circle circle3 = new Circle();
+    Circle circle4 = new Circle();
+    Circle circle5 = new Circle();
+    Circle circle6 = new Circle();
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
     }
@@ -72,18 +79,57 @@ public class ToileController implements Initializable {
     private void Dessiner(int val, int comp) {
         err1.setVisible(false);
         err2.setVisible(false);
-
         int x = getXRadarChart(val,comp);
         int y = getYRadarChart(val,comp);
 
-        Circle circle = new Circle();
-        circle.setCenterX(x);
-        circle.setCenterY(y);
-        circle.setRadius(7);
-
-        scene.getChildren().add(circle);
-
-        System.out.println("Cercle val : "+val+", comp : "+comp);
+        if (comp == 1) {
+            scene.getChildren().remove(circle1);
+            circle1.setVisible(true);
+            circle1.setCenterX(x);
+            circle1.setCenterY(y);
+            circle1.setRadius(7);
+            scene.getChildren().add(circle1);
+        }
+        if (comp == 2) {
+            scene.getChildren().remove(circle2);
+            circle2.setVisible(true);
+            circle2.setCenterX(x);
+            circle2.setCenterY(y);
+            circle2.setRadius(7);
+            scene.getChildren().add(circle2);
+        }
+        if (comp == 3) {
+            scene.getChildren().remove(circle3);
+            circle3.setVisible(true);
+            circle3.setCenterX(x);
+            circle3.setCenterY(y);
+            circle3.setRadius(7);
+            scene.getChildren().add(circle3);
+        }
+        if (comp == 4) {
+            scene.getChildren().remove(circle4);
+            circle4.setVisible(true);
+            circle4.setCenterX(x);
+            circle4.setCenterY(y);
+            circle4.setRadius(7);
+            scene.getChildren().add(circle4);
+        }
+        if (comp == 5) {
+            scene.getChildren().remove(circle5);
+            circle5.setVisible(true);
+            circle5.setCenterX(x);
+            circle5.setCenterY(y);
+            circle5.setRadius(7);
+            scene.getChildren().add(circle5);
+        }
+        if (comp == 6) {
+            scene.getChildren().remove(circle6);
+            circle6.setVisible(true);
+            circle6.setCenterX(x);
+            circle6.setCenterY(y);
+            circle6.setRadius(7);
+            scene.getChildren().add(circle6);
+        }
     }
 
 
@@ -95,8 +141,13 @@ public class ToileController implements Initializable {
     private void viderClicked() {
         err1.setVisible(false);
         err2.setVisible(false);
+        circle1.setVisible(false);
+        circle2.setVisible(false);
+        circle3.setVisible(false);
+        circle4.setVisible(false);
+        circle5.setVisible(false);
+        circle6.setVisible(false);
     }
-
 
 
 // Get le contenu des Text Field (TF)

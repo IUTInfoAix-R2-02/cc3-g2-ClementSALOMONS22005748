@@ -9,7 +9,7 @@
 
 <HBox id="scene" prefHeight="420.0" prefWidth="650.0" spacing="20.0" styleClass="scene" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.amu.iut.cc3.ToileController">
     <Pane fx:id="scene" prefHeight="400.0" prefWidth="400.0">
-        <Circle centerX="200.0" centerY="200.0" radius="200.0" styleClass="toile" />
+        <Circle centerX="200.0" centerY="200.0" layoutY="10.0" radius="196.0" styleClass="toile" />
         <Circle centerX="200.0" centerY="200.0" radius="150.0" styleClass="toile" />
         <Circle centerX="200.0" centerY="200.0" radius="100.0" styleClass="toile" />
         <Circle centerX="200.0" centerY="200.0" radius="50.0" styleClass="toile" />
@@ -20,14 +20,14 @@
         <Line endX="200" endY="400.0" startX="200.0" startY="0" styleClass="toile" />
         <Line endX="200.0" endY="400.0" rotate="60.0" startX="200.0" styleClass="toile" />
         <Line endX="200.0" endY="400.0" rotate="120.0" startX="200.0" styleClass="toile" />
-        <Text layoutX="-11.0" layoutY="19.0" text="Compétence 1" x="170" y="0" />
+        <Text layoutX="-18.0" layoutY="10.0" text="Compétence 1" x="170" y="0" />
         <Text layoutY="-2.0" text="Compétence 2" x="300" y="100" />
         <Text text="Compétence 3" x="300" y="300" />
         <Text text="Compétence 4" x="170" y="410" />
         <Text text="Compétence 5" x="26" y="300" />
         <Text text="Compétence 6" x="26" y="99" />
         <Pane fx:id="toile" styleClass="toile" />
-      <HBox prefHeight="100.0" prefWidth="201.0" />
+      <HBox layoutX="5.0" layoutY="5.0" prefHeight="100.0" prefWidth="201.0" />
     </Pane>
    <VBox prefHeight="420.0" prefWidth="259.0">
       <children>
