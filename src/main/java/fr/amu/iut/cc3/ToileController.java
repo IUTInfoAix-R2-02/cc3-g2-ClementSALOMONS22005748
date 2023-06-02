@@ -48,6 +48,11 @@ public class ToileController implements Initializable {
     TextField TF6;
 
     @FXML
+    Label err1;
+    @FXML
+    Label err2;
+
+    @FXML
     Pane scene;
 
     @Override
@@ -65,6 +70,9 @@ public class ToileController implements Initializable {
 
 // Dessiner un point
     private void Dessiner(int val, int comp) {
+        err1.setVisible(false);
+        err2.setVisible(false);
+
         int x = getXRadarChart(val,comp);
         int y = getYRadarChart(val,comp);
 
@@ -82,11 +90,11 @@ public class ToileController implements Initializable {
 // Tracer et Vider
     @FXML
     private void tracerClicked() {
-        System.out.println("test trace");
     }
     @FXML
     private void viderClicked() {
-        System.out.println("test vide");
+        err1.setVisible(false);
+        err2.setVisible(false);
     }
 
 
@@ -98,7 +106,13 @@ public class ToileController implements Initializable {
         if (TF1.getText().length()>0) {
             val = Integer. valueOf(TF1.getText());
         }
-        Dessiner(val,1);
+        if (val >= 0 && val <= 20) {
+            Dessiner(val,1);
+        }
+        else {
+            err1.setVisible(true);
+            err2.setVisible(true);
+        }
     }
     @FXML
     private void get2() {
@@ -106,7 +120,13 @@ public class ToileController implements Initializable {
         if (TF2.getText().length()>0) {
             val = Integer. valueOf(TF2.getText());
         }
-        Dessiner(val,2);
+        if (val >= 0 && val <= 20) {
+            Dessiner(val,2);
+        }
+        else {
+            err1.setVisible(true);
+            err2.setVisible(true);
+        }
     }
     @FXML
     private void get3() {
@@ -114,7 +134,13 @@ public class ToileController implements Initializable {
         if (TF3.getText().length()>0) {
             val = Integer. valueOf(TF3.getText());
         }
-        Dessiner(val,3);
+        if (val >= 0 && val <= 20) {
+            Dessiner(val,3);
+        }
+        else {
+            err1.setVisible(true);
+            err2.setVisible(true);
+        }
     }
     @FXML
     private void get4() {
@@ -122,7 +148,13 @@ public class ToileController implements Initializable {
         if (TF4.getText().length()>0) {
             val = Integer. valueOf(TF4.getText());
         }
-        Dessiner(val,4);
+        if (val >= 0 && val <= 20) {
+            Dessiner(val,4);
+        }
+        else {
+            err1.setVisible(true);
+            err2.setVisible(true);
+        }
     }
     @FXML
     private void get5() {
@@ -130,7 +162,13 @@ public class ToileController implements Initializable {
         if (TF5.getText().length()>0) {
             val = Integer. valueOf(TF5.getText());
         }
-        Dessiner(val,5);
+        if (val >= 0 && val <= 20) {
+            Dessiner(val,5);
+        }
+        else {
+            err1.setVisible(true);
+            err2.setVisible(true);
+        }
     }
     @FXML
     private void get6() {
@@ -138,7 +176,13 @@ public class ToileController implements Initializable {
         if (TF6.getText().length()>0) {
             val = Integer. valueOf(TF6.getText());
         }
-        Dessiner(val,6);
+        if (val >= 0 && val <= 20) {
+            Dessiner(val,6);
+        }
+        else {
+            err1.setVisible(true);
+            err2.setVisible(true);
+        }
     }
 
 

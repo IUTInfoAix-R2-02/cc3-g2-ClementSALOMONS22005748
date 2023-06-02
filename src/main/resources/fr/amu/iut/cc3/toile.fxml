@@ -7,9 +7,8 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<HBox id="scene" prefHeight="420.0" prefWidth="650.0" spacing="20.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="fr.amu.iut.cc3.ToileController">
-    <Pane prefHeight="400.0" prefWidth="400.0" fx:id="scene">
+<HBox id="scene" prefHeight="420.0" prefWidth="650.0" spacing="20.0" styleClass="scene" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.amu.iut.cc3.ToileController">
+    <Pane fx:id="scene" prefHeight="400.0" prefWidth="400.0">
         <Circle centerX="200.0" centerY="200.0" radius="200.0" styleClass="toile" />
         <Circle centerX="200.0" centerY="200.0" radius="150.0" styleClass="toile" />
         <Circle centerX="200.0" centerY="200.0" radius="100.0" styleClass="toile" />
@@ -32,7 +31,7 @@
     </Pane>
    <VBox prefHeight="420.0" prefWidth="259.0">
       <children>
-         <GridPane prefHeight="307.0" prefWidth="245.0">
+         <GridPane prefHeight="325.0" prefWidth="245.0">
            <columnConstraints>
              <ColumnConstraints hgrow="SOMETIMES" maxWidth="185.0" minWidth="10.0" prefWidth="185.0" />
              <ColumnConstraints hgrow="SOMETIMES" maxWidth="107.0" minWidth="10.0" prefWidth="46.0" />
@@ -46,14 +45,14 @@
                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
            </rowConstraints>
             <children>
-               <Label prefHeight="16.0" prefWidth="181.0" text="Compétence 1 - Réaliser"  />
+               <Label prefHeight="16.0" prefWidth="181.0" text="Compétence 1 - Réaliser" />
                <Label prefHeight="16.0" prefWidth="181.0" text="Compétence 2 - Optimiser" GridPane.rowIndex="1" />
-                <TextField fx:id="TF1" prefHeight="24.0" prefWidth="135.0" GridPane.columnIndex="1" onAction="#get1" />
-               <TextField fx:id="TF2" GridPane.columnIndex="1" GridPane.rowIndex="1" onAction="#get2"  />
-               <TextField fx:id="TF3" GridPane.columnIndex="1" GridPane.rowIndex="2" onAction="#get3"  />
-               <TextField fx:id="TF4" GridPane.columnIndex="1" GridPane.rowIndex="3" onAction="#get4"  />
-               <TextField fx:id="TF5" GridPane.columnIndex="1" GridPane.rowIndex="4" onAction="#get5"  />
-               <TextField fx:id="TF6" GridPane.columnIndex="1" GridPane.rowIndex="5" onAction="#get6"  />
+                <TextField fx:id="TF1" onAction="#get1" prefHeight="24.0" prefWidth="135.0" GridPane.columnIndex="1" />
+               <TextField fx:id="TF2" onAction="#get2" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               <TextField fx:id="TF3" onAction="#get3" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               <TextField fx:id="TF4" onAction="#get4" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+               <TextField fx:id="TF5" onAction="#get5" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+               <TextField fx:id="TF6" onAction="#get6" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                <Label text="Compétence 3 - Administrer" GridPane.rowIndex="2">
                   <font>
                      <Font size="12.0" />
@@ -64,9 +63,14 @@
                <Label text="Compétence 6 - Collaborer" GridPane.rowIndex="5" />
             </children>
             <padding>
-               <Insets bottom="7.0" left="7.0" right="7.0" top="50.0" />
+               <Insets bottom="20.0" left="7.0" right="7.0" top="50.0" />
             </padding>
          </GridPane>
+         <Label fx:id="err1" text="Erreur de saisie :" textFill="RED" visible="false" />
+         <Label fx:id="err2" layoutX="10.0" layoutY="316.0" text="Les valeurs doivent etre entre 0 et 20" textFill="RED" visible="false">
+            <font>
+               <Font size="12.0" />
+            </font></Label>
          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
             <children>
                <Button mnemonicParsing="false" onAction="#tracerClicked" text="Tracer" />

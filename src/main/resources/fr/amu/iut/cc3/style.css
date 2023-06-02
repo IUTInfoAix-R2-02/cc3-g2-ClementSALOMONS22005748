@@ -10,6 +10,10 @@
     -fx-stroke: "#919090";
 }
 
+.scene {
+    -fx-background-color: "#73A7AC";
+}
+
 Line {
     -fx-stroke: "blue";
     -fx-stroke-width: 2;
